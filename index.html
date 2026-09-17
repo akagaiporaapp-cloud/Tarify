@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Corrida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Simular Corrida</h2>
+    
+    <label for="origem">Endereço de Origem:</label>
+    <input type="text" id="origem" placeholder="Digite o ponto de partida...">
+
+    <label for="destino">Endereço de Destino:</label>
+    <input type="text" id="destino" placeholder="Digite o destino...">
+
+    <button id="btn-calcular" onclick="processarCorrida()">Calcular Valor</button>
+
+    <div id="resultado" class="hidden">
+      <p>Distância: <strong id="res-distancia">-</strong> km</p>
+      <p class="preco-destaque">Preço Estimado: R$ <span id="res-preco">0.00</span></p>
+    </div>
+  </div>
+
+  <!-- Substitua SUAS_CHAVE_GOOGLE_MAPS_AQUI pela sua chave de API do Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=SUAS_CHAVE_GOOGLE_MAPS_AQUI&libraries=places"></script>
+  <script src="app.js"></script>
+</body>
+</html>
